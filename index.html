@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Miku Video Power Switch</title>
+
+ <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<img
+    src="assets/miku off.png"
+    class="background active"
+    id="offBackground"
+    alt="Miku OFF"
+>
+
+<img
+    src="assets/miku start.png"
+    class="background"
+    id="startBackground"
+    alt="Miku Starting"
+>
+
+<video
+    id="onVideo"
+    muted
+    loop
+    playsinline
+    preload="auto"
+>
+    <source src="assets/miku on.mp4" type="video/mp4">
+</video>
+
+
+<div class="controls">
+
+    <button
+        class="power-button"
+        id="powerButton"
+        type="button"
+        aria-label="Turn on"
+        aria-pressed="false"
+    >
+        <svg viewBox="0 0 24 24">
+            <path d="M12 2V12"></path>
+            <path d="M5.5 5.5a9 9 0 1 0 13 0"></path>
+        </svg>
+    </button>
+
+    <div class="status" id="status">OFF</div>
+
+</div>
+
+
+<audio
+    id="soundOn"
+    src="assets/miku beam.mp3"
+    preload="auto"
+></audio>
+
+<audio
+    id="soundOff"
+    src="assets/Miku off.mp3"
+    preload="auto"
+></audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>
